@@ -1,10 +1,10 @@
 {% extends 'base.html' %}
 
-{% load ratings %}
+{% load i18n ratings %}
 
 {% block content %}
-    <h1>Block Sizes</h1>
-    <p>Page showing the ratings at different star sizes</p>
+    <h1>{% trans 'Block Sizes' %}</h1>
+    <p>{% trans 'Page showing the ratings at different star sizes' %}</p>
     {% for size, object in sizes.items %}
         <div id="star-size-{{ size }}">
             <style>

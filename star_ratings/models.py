@@ -9,7 +9,7 @@ from django.db import models
 from django.contrib.contenttypes.fields import GenericForeignKey
 from django.contrib.contenttypes.models import ContentType
 from django.db.models import Avg, Count, Sum
-from django.utils.translation import ugettext as _
+from django.utils.translation import gettext_lazy as _
 from model_utils.models import TimeStampedModel
 
 from . import app_settings, get_star_ratings_rating_model_name, get_star_ratings_rating_model
@@ -74,12 +74,12 @@ class AbstractBaseRating(models.Model):
     """
     Attaches Rating models and running counts to the model being rated via a generic relation.
     """
-    count = models.PositiveIntegerField(default=0)
-    total = models.PositiveIntegerField(default=0)
-    average = models.DecimalField(max_digits=6, decimal_places=3, default=Decimal(0.0))
+    count = models.PositiveIntegerField(verbose_name=_('Count'), default=0)
+    total = models.PositiveIntegerField(verbose_name=_('Total'), default=0)
+    average = models.DecimalField(verbose_name=_('Average'), max_digits=6, decimal_places=3, default=Decimal(0.0))
 
-    content_type = models.ForeignKey(ContentType, null=True, blank=True, on_delete=models.CASCADE)
-    object_id = models.PositiveIntegerField(null=True, blank=True)
+    content_type = models.ForeignKey(ContentType, verbose_name=_('Content Type'), null=True, blank=True, on_delete=models.CASCADE)
+    object_id = models.PositiveIntegerField(verbose_name=_('Object ID'), null=True, blank=True)
     content_object = GenericForeignKey()
 
     objects = RatingManager()
@@ -118,6 +118,10 @@ class Rating(AbstractBaseRating):
     class Meta(AbstractBaseRating.Meta):
         swappable = swapper.swappable_setting('star_ratings', 'Rating')
 
+    class Meta:
+        verbose_name_plural = _('Ratings')
+        verbose_name = _('Rating')
+
 
 class UserRatingManager(models.Manager):
     def for_instance_by_user(self, instance, user=None):
@@ -146,17 +150,19 @@ class UserRating(TimeStampedModel):
     """
     An individual rating of a user against a model.
     """
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, blank=True, null=True, on_delete=models.CASCADE)
-    ip = models.GenericIPAddressField(blank=True, null=True)
-    score = models.PositiveSmallIntegerField()
-    rating = models.ForeignKey(get_star_ratings_rating_model_name(), related_name='user_ratings', on_delete=models.CASCADE)
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, verbose_name=_('User'), blank=True, null=True, on_delete=models.CASCADE)
+    ip = models.GenericIPAddressField(verbose_name=_('IP'), blank=True, null=True)
+    score = models.PositiveSmallIntegerField(verbose_name=_('Score'))
+    rating = models.ForeignKey(get_star_ratings_rating_model_name(), verbose_name=_('Rating'), related_name='user_ratings', on_delete=models.CASCADE)
 
     objects = UserRatingManager()
 
     class Meta:
+        verbose_name_plural = _('User Ratings')
+        verbose_name = _('User Rating')
         unique_together = ['user', 'rating']
 
     def __str__(self):
         if not app_settings.STAR_RATINGS_ANONYMOUS:
-            return '{} rating {} for {}'.format(self.user, self.score, self.rating.content_object)
-        return '{} rating {} for {}'.format(self.ip, self.score, self.rating.content_object)
+            return _('{} rating {} for {}').format(self.user, self.score, self.rating.content_object)
+        return _('{} rating {} for {}').format(self.ip, self.score, self.rating.content_object)

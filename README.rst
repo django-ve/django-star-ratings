@@ -93,14 +93,14 @@ Settings
 ========
 
 To prohibit users from altering their ratings set
-``STAR_RATINGS_RERATE = False`` in settings.py
+``STAR_RATINGS_RERATE = False`` in ``settings.py``
 
 To allow users to delete a rating by selecting the same score again, set
-``STAR_RATINGS_RERATE_SAME_DELETE = True`` in settings.py, note
+``STAR_RATINGS_RERATE_SAME_DELETE = True`` in ``settings.py``, note
 that ``STAR_RATINGS_RERATE`` must be True if this is set.
 
 To allow uses to delete a rating via a clear button, set
-``STAR_RATINGS_CLEARABLE = True``` in settings.py. This can be used
+``STAR_RATINGS_CLEARABLE = True``` in ``settings.py``. This can be used
 with or without STAR_RATINGS_RERATE.
 
 To change the number of rating stars, set ``STAR_RATINGS_RANGE``
@@ -169,7 +169,7 @@ Custom Rating Model
 ===================
 
 In some cases you may need to create your own rating model. This is possible
-by setting ``STAR_RATING_RATING_MODEL`` in your settings file. This can be useful
+by setting ``STAR_RATINGS_RATING_MODEL`` in your settings file. This can be useful
 to add additional fields or methods to the model. This is very similar to the how
 django handles swapping the user model
 (see [https://docs.djangoproject.com/en/1.10/topics/auth/customizing/#substituting-a-custom-user-model]).

@@ -9,6 +9,7 @@ __next__
 * Added setting to allow deleting rating if the same score is sent
 * Added support for Brazilian Portuguese language support  (thanks @luizomf)
 * Added support for Spanish language support (thanks @macagua)
+* Added more improvements for i18n support (thanks @macagua)
 
 0.9.1 (2019-12-13)
 ------------------

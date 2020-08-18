@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 from __future__ import unicode_literals
 
 import os
+from django.utils.translation import gettext_lazy as _
 from os.path import join
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
@@ -47,8 +48,8 @@ INSTALLED_APPS = (
 
 MIDDLEWARE = (
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
@@ -74,6 +75,16 @@ DATABASES = {
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
+
+LANGUAGES = [
+  ('de', _('German')),
+  ('en', _('English')),
+  ('es', _('Spanish')),
+  ('eu', _('Basque')),
+  ('fr', _('French')),
+  ('pt-BR', _('Portuguese (Brazil)')),
+  ('ru', _('Russian')),
+]
 
 TIME_ZONE = 'UTC'
 
@@ -118,7 +129,33 @@ TEMPLATES = [
     }
 ]
 
+# Django Star Ratings System
+# https://django-star-ratings.readthedocs.io/
+
+# To change the number of rating stars, defaults to 5
+STAR_RATINGS_RANGE = 5
+
+# To allow uses to delete a rating via a clear button, defaults to False
+STAR_RATINGS_CLEARABLE = False
+
+# To allow uses anonymus to do a rating, defaults to False
+STAR_RATINGS_ANONYMOUS = False
+
+# To prohibit users from altering their ratings set, defaults to True
 STAR_RATINGS_RERATE = True
+STAR_RATINGS_RERATE_SAME_DELETE = False
+
+# To change the star icon height, defaults to 32
+STAR_RATINGS_STAR_HEIGHT = 32
+
+# To set the same value from the star icon height to the star icon width, defaults the same STAR_RATINGS_STAR_HEIGHT
+STAR_RATINGS_STAR_WIDTH = STAR_RATINGS_STAR_HEIGHT
+
+# To change the star icon path, defaults to 'star-ratings/images/stars.png'
+STAR_RATINGS_STAR_SPRITE = 'star-ratings/images/stars.png'
+
+# To override the 'object_id' field on the 'Rating' model to a reasonable value for your new pk field, defaults to a digit
+STAR_RATINGS_OBJECT_ID_PATTERN = r'\d+'
 
 LOGGING = {
     'version': 1,

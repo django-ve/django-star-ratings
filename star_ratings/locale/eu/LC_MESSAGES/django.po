@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-23 11:34+0200\n"
+"POT-Creation-Date: 2020-08-18 16:04-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,46 +18,101 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: admin.py:17 admin.py:30
+#: admin.py:21 models.py:156
 msgid "Score"
 msgstr "Puntuak"
 
-#: admin.py:48
+#: admin.py:39
 msgid "Rating average"
 msgstr "Puntuazio media"
 
-#: models.py:35
-msgid "User is mandatory!"
-msgstr "Erabiltzailea beharrezkoa da!"
+#: apps.py:10
+msgid "Star Ratings"
+msgstr ""
 
-#: models.py:40
-msgid "IP address is mandatory!"
-msgstr "IP helbidea beharrezkoa da!"
+#: models.py:22
+#, fuzzy
+msgid ""
+"User is mandatory. Enable 'STAR_RATINGS_ANONYMOUS' for anonymous ratings."
+msgstr "Erabiltzailea beharrezkoa da. "
 
-#: models.py:44
+#: models.py:55
 msgid "Already rated."
 msgstr "Dagoeneko puntuatuta."
 
-#: templates/star_ratings/widget_base.html:29
+#: models.py:78
+msgid "Count"
+msgstr ""
+
+#: models.py:79
+msgid "Total"
+msgstr ""
+
+#: models.py:80
+#, fuzzy
+msgid "Average"
+msgstr "Media"
+
+#: models.py:82
+msgid "Content Type"
+msgstr ""
+
+#: models.py:83
+msgid "Object ID"
+msgstr ""
+
+#: models.py:123
+msgid "Ratings"
+msgstr "Puntuazioak"
+
+#: models.py:124 models.py:157
+#, fuzzy
+msgid "Rating"
+msgstr "Puntuazio"
+
+#: models.py:154
+#, fuzzy
+msgid "User"
+msgstr "Erabiltzailea"
+
+#: models.py:155
+msgid "IP"
+msgstr "IP helbidea"
+
+#: models.py:162
+#, fuzzy
+msgid "User Ratings"
+msgstr "Erabiltzaileen puntuazioak"
+
+#: models.py:163
+#, fuzzy
+msgid "User Rating"
+msgstr "Erabiltzailea puntuazio"
+
+#: models.py:168 models.py:169
+msgid "{} rating {} for {}"
+msgstr ""
+
+#: templates/star_ratings/widget_base.html:40
 msgid "Log in to rate"
 msgstr "Sartu puntuatzeko"
 
-#: templates/star_ratings/widget_base.html:52
+#: templates/star_ratings/widget_base.html:66
 msgid "Average: "
 msgstr "Media: "
 
-#: templates/star_ratings/widget_base.html:55
+#: templates/star_ratings/widget_base.html:69
 msgid "Rating Count: "
 msgstr "Puntuak guztira: "
 
-#: templates/star_ratings/widget_base.html:58
+#: templates/star_ratings/widget_base.html:72
 msgid "You Rated: "
 msgstr "Zure puntuak: "
 
-#: templates/star_ratings/widget_base.html:58
+#: templates/star_ratings/widget_base.html:72
 msgid "Not rated"
 msgstr "Puntuatu gabe"
 
-#: templates/star_ratings/widget_base.html:60
+#: templates/star_ratings/widget_base.html:74
 msgid "Please log in to rate."
 msgstr "Mesedez sartu puntuatzeko."
