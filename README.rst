@@ -143,7 +143,7 @@ You can also set ``STAR_RATINGS_STAR_SPRITE`` to the location of your sprite she
 Customize widget template
 =========================
 
-You can customize ratings widget by creating ``star_ratings/widget.html``. For example :
+You can customize ratings widget by creating ``star_ratings/widget.html`` file. For example :
 
 ::
 
@@ -152,7 +152,7 @@ You can customize ratings widget by creating ``star_ratings/widget.html``. For e
     Whatever you want
     {% endblock %}
 
-See ``star_ratings/widget_base.html`` for other blocks to be extended.
+See ``star_ratings/widget_base.html`` file for other blocks to be extended.
 
 
 Ordering by ratings
@@ -218,7 +218,7 @@ positive integer field which is fine for most uses, if this isn't though you wil
 need to override the ``object_id`` field on the rating model as well as set
 ``STAR_RATINGS_OBJECT_ID_PATTERN`` to a reasonable value for your new ``pk`` field. As
 of Django 1.10 you can now hide fields form parent abstract models, so to change
-the ``object_id``to a ``CharField`` you can do something like:
+the ``object_id`` to a ``CharField`` you can do something like:
 
 ::
 
