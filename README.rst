@@ -105,7 +105,7 @@ that ``STAR_RATINGS_RERATE`` must be True if this is set.
 
 To allow uses to delete a rating via a clear button, set
 ``STAR_RATINGS_CLEARABLE = True`` in ``settings.py`` file. This can be used
-with or without STAR_RATINGS_RERATE.
+with or without ``STAR_RATINGS_RERATE``.
 
 To change the number of rating stars, set ``STAR_RATINGS_RANGE``
 (defaults to 5)
@@ -158,7 +158,7 @@ See ``star_ratings/widget_base.html`` file for other blocks to be extended.
 Ordering by ratings
 ===================
 
-The easiest way to order by ratings is to add a ``GenericRelation`` to
+The easiest way to order by ratings is to add a ``GenericRelation`` field to
 the ``Rating`` model from your model:
 
 ::
