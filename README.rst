@@ -73,13 +73,13 @@ The ``django-star-ratings`` package from Github included have a usefull demo, fo
     $ python manage.py createsuperuser --username admin --email admin@mail.com
     $ python manage.py runserver
 
-This demo has a Django model called "Foo" and two different views.
+This demo has a Django model called ``Foo`` and two different views:
 
-You can see a default example for Foo model at the following URL: http://127.0.0.1:8000/
+- A default example for ``Foo`` model at the following URL: http://127.0.0.1:8000/
 
-Also you can see a Page showing the ratings at different star sizes for Foo model at the following URL: http://127.0.0.1:8000/sizes
+- A page showing the ratings at different star sizes for ``Foo`` model at the following URL: http://127.0.0.1:8000/sizes
 
-You can manage the ``django-star-ratings`` app from Django Admin at the following URL: http://127.0.0.1:8000/admin/
+Also you can manage the ``Rating`` and ``UserRating`` models from ``django-star-ratings`` app into Django Admin at the following URL: http://127.0.0.1:8000/admin/
 
 
 Usage
