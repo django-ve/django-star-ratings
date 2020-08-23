@@ -55,10 +55,33 @@ Make sure ``'django.core.context_processors.request',`` is in
 ``TEMPLATE_CONTEXT_PROCESSORS``.
 
 
+Demo
+====
+
+The ``django-star-ratings`` package from Github included have a usefull demo, for running, execute the following commands:
+
+::
+
+    $ git clone https://github.com/wildfish/django-star-ratings.git
+    $ cd django-star-ratings/
+    $ virtualenv --python=python3 venv
+    $ source venv/bin/activate
+    $ cd demo/
+    $ pip3 install -r requirements.txt
+    $ python manage.py makemigrations
+    $ python manage.py migrate
+    $ python manage.py createsuperuser --username admin --email admin@mail.com
+    $ python manage.py runserver
+
+Open in your browser the following URL: http://127.0.0.1:8000/
+
+Also you can open in your browser the following URL: http://127.0.0.1:8000/admin/
+
+
 Usage
 =====
 
-Add the following javascript and stylesheet files to your template
+Add the following javascript and stylesheet files to your HTML template:
 
 ::
 
@@ -70,7 +93,7 @@ Add the following javascript and stylesheet files to your template
     ...
     </html>
 
-To enable ratings for a model add the following tag in your template
+To enable ratings for a model add the following tag in your HTML template:
 
 ::
 
