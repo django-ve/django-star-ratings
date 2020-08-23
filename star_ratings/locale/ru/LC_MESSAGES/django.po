@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-18 16:04-0400\n"
+"POT-Creation-Date: 2020-08-23 04:24-0400\n"
 "PO-Revision-Date: 2019-11-19 15:24+0300\n"
 "Last-Translator: Dmitriy Efimov <daefimov@gmail.com>\n"
 "Language-Team: \n"
@@ -19,7 +19,7 @@ msgstr ""
 "X-Generator: Poedit 2.0.6\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
-#: admin.py:21 models.py:156
+#: admin.py:21 models.py:155
 msgid "Score"
 msgstr "Счёт"
 
@@ -31,66 +31,66 @@ msgstr "Средний рейтинг"
 msgid "Star Ratings"
 msgstr ""
 
-#: models.py:22
+#: models.py:21
 #, fuzzy
 msgid ""
 "User is mandatory. Enable 'STAR_RATINGS_ANONYMOUS' for anonymous ratings."
 msgstr "Пользователь обязателен. "
 
-#: models.py:55
+#: models.py:54
 msgid "Already rated."
 msgstr "Уже оценено."
 
-#: models.py:78
+#: models.py:77
 msgid "Count"
 msgstr ""
 
-#: models.py:79
+#: models.py:78
 msgid "Total"
 msgstr ""
 
-#: models.py:80
+#: models.py:79
 #, fuzzy
 msgid "Average"
 msgstr "Среднее"
 
-#: models.py:82
+#: models.py:81
 msgid "Content Type"
 msgstr ""
 
-#: models.py:83
+#: models.py:82
 msgid "Object ID"
 msgstr ""
 
-#: models.py:123
+#: models.py:122
 msgid "Ratings"
 msgstr ""
 
-#: models.py:124 models.py:157
+#: models.py:123 models.py:156
 #, fuzzy
 msgid "Rating"
 msgstr "Средний рейтинг"
 
-#: models.py:154
+#: models.py:153
 #, fuzzy
 msgid "User"
 msgstr "Пользователь"
 
-#: models.py:155
+#: models.py:154
 msgid "IP"
 msgstr "IP-адрес"
 
-#: models.py:162
+#: models.py:161
 #, fuzzy
 msgid "User Ratings"
 msgstr "Пользователь"
 
-#: models.py:163
+#: models.py:162
 #, fuzzy
 msgid "User Rating"
 msgstr "Пользователь pейтинг"
 
-#: models.py:168 models.py:169
+#: models.py:169 models.py:170
 msgid "{} rating {} for {}"
 msgstr ""
 
@@ -117,3 +117,7 @@ msgstr "Не оценено"
 #: templates/star_ratings/widget_base.html:74
 msgid "Please log in to rate."
 msgstr "Пожалуйста, войдите, чтобы оценить."
+
+#: templates/star_ratings/widget_base.html:85
+msgid "Clear"
+msgstr ""

@@ -1,24 +1,23 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# Leonardo J. Caballero G. <leonardocaballero@gmail.com>, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-18 16:04-0400\n"
-"PO-Revision-Date: 2019-01-11 21:45+0100\n"
-"Last-Translator: Alexis Michaltsis\n"
-"Language-Team: \n"
+"POT-Creation-Date: 2020-08-23 04:24-0400\n"
+"PO-Revision-Date: 2020-08-23 04:33-0400\n"
+"Last-Translator: Leonardo J. Caballero G. <leonardocaballero@gmail.com>\n"
+"Language-Team: ES <LL@li.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 2.2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Virtaal 0.7.1\n"
 
-#: admin.py:21 models.py:156
+#: admin.py:21 models.py:155
 msgid "Score"
 msgstr "Score"
 
@@ -28,72 +27,67 @@ msgstr "Durchschnitt"
 
 #: apps.py:10
 msgid "Star Ratings"
-msgstr ""
+msgstr "Stern-Bewertungen"
 
-#: models.py:22
-#, fuzzy
+#: models.py:21
 msgid ""
 "User is mandatory. Enable 'STAR_RATINGS_ANONYMOUS' for anonymous ratings."
-msgstr "Ein Benutzer ist obligatorisch. "
+msgstr ""
+"Benutzer ist obligatorisch. Aktivieren Sie 'STAR_RATINGS_ANONYMOUS' für "
+"anonyme Bewertungen."
 
-#: models.py:55
+#: models.py:54
 msgid "Already rated."
 msgstr "Bereits bewertet."
 
-#: models.py:78
+#: models.py:77
 msgid "Count"
-msgstr ""
+msgstr "Zählen Sie"
+
+#: models.py:78
+msgid "Total"
+msgstr "Gesamt"
 
 #: models.py:79
-msgid "Total"
-msgstr ""
-
-#: models.py:80
-#, fuzzy
 msgid "Average"
 msgstr "Durchschnitt"
 
-#: models.py:82
+#: models.py:81
 msgid "Content Type"
-msgstr ""
+msgstr "Inhaltstyp"
 
-#: models.py:83
+#: models.py:82
 msgid "Object ID"
-msgstr ""
+msgstr "Objekt-ID"
 
-#: models.py:123
-#, fuzzy
+#: models.py:122
 msgid "Ratings"
 msgstr "Bewertungen"
 
-#: models.py:124 models.py:157
-#, fuzzy
+#: models.py:123 models.py:156
 #| msgid "Rating average"
 msgid "Rating"
-msgstr "Durchschnitt"
+msgstr "Bewertung"
 
-#: models.py:154
-#, fuzzy
+#: models.py:153
 msgid "User"
 msgstr "Benutzer"
 
-#: models.py:155
+#: models.py:154
 msgid "IP"
 msgstr "IP-Adresse"
 
-#: models.py:162
-#, fuzzy
+#: models.py:161
 msgid "User Ratings"
 msgstr "Benutzer-Bewertungen"
 
-#: models.py:163
-#, fuzzy
+#: models.py:162
 msgid "User Rating"
 msgstr "Benutzer-Bewertung"
 
-#: models.py:168 models.py:169
+#: models.py:169 models.py:170
 msgid "{} rating {} for {}"
-msgstr ""
+msgstr "{} bewertung {} für {}"
 
 #: templates/star_ratings/widget_base.html:40
 msgid "Log in to rate"
@@ -118,3 +112,7 @@ msgstr "Nicht bewertet"
 #: templates/star_ratings/widget_base.html:74
 msgid "Please log in to rate."
 msgstr "Zum Bewerten, anmelden."
+
+#: templates/star_ratings/widget_base.html:85
+msgid "Clear"
+msgstr "Löschen"
